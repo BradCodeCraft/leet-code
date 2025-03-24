@@ -1,9 +1,10 @@
 package dev.bradcodecraft.app;
 
-/*
- * Given a binary array nums, return the maximum number of consecutive 1's in the array.
- */
-public class MaxConsecutiveOnes {
+public class Solution {
+  /*
+   * Given a binary array nums, return the maximum number of consecutive 1's in
+   * the array.
+   */
   public int findMaxConsecutiveOnes(int[] nums) {
     if (nums.length == 0 || nums.equals(new int[] { 0 })) {
       return 0;
@@ -24,5 +25,23 @@ public class MaxConsecutiveOnes {
 
       return Math.max(currentMax, currentTotal);
     }
+  }
+
+  /*
+   * Given an array nums of integers, return how many of them contain an even
+   * number of digits.
+   */
+  public int findNumbers(int[] nums) {
+    int total = 0;
+
+    for (int number : nums) {
+      int numberOfDigits = (int) Math.log10(number) + 1;
+
+      if (numberOfDigits % 2 == 0) {
+        total++;
+      }
+    }
+
+    return total;
   }
 }
