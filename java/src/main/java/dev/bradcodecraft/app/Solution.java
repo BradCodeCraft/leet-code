@@ -1,5 +1,7 @@
 package dev.bradcodecraft.app;
 
+import java.util.Arrays;
+
 public class Solution {
   /*
    * Given a binary array nums, return the maximum number of consecutive 1's in
@@ -43,5 +45,28 @@ public class Solution {
     }
 
     return total;
+  }
+
+  /*
+   * Given an integer array nums sorted in non-decreasing order, return an array
+   * of the squares of each number sorted in non-decreasing order.
+   */
+  public int[] sortedSquares(int[] nums) {
+    int length = nums.length;
+    int left = 0;
+    int right = length - 1;
+    int[] result = new int[length];
+
+    for (int i = right; i >= 0; i--) {
+      if (Math.abs(nums[left]) > Math.abs(nums[right])) {
+        result[i] = nums[left] * nums[left];
+        left++;
+      } else {
+        result[i] = nums[right] * nums[right];
+        right--;
+      }
+    }
+
+    return result;
   }
 }
