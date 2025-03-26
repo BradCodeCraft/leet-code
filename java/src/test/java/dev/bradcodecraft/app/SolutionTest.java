@@ -43,4 +43,31 @@ public class SolutionTest {
         new int[] { 0, 0, 0, 0, 0, 0, 0 },
         arrayTwo);
   }
+
+  @Test
+  void testMergeSortedArray() {
+    int[] arrayOne = new int[] { 1, 2, 3, 0, 0, 0 };
+    new Solution().merge(arrayOne, 3, new int[] { 2, 5, 6 }, 3);
+    assertArrayEquals(
+        new int[] { 1, 2, 2, 3, 5, 6 },
+        arrayOne);
+
+    int[] arrayTwo = new int[] { 1 };
+    new Solution().merge(arrayTwo, 1, new int[] {}, 0);
+    assertArrayEquals(
+        new int[] { 1 },
+        arrayTwo);
+
+    int[] arrayThree = new int[] { 0 };
+    new Solution().merge(arrayThree, 0, new int[] { 1 }, 1);
+    assertArrayEquals(
+        new int[] { 1 },
+        arrayThree);
+
+    int[] arrayFour = new int[] { 2, 0 };
+    new Solution().merge(arrayFour, 1, new int[] { 1 }, 1);
+    assertArrayEquals(
+        new int[] { 1, 2 },
+        arrayFour);
+  }
 }
