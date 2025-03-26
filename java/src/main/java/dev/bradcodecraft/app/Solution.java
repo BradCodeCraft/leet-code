@@ -69,4 +69,29 @@ public class Solution {
 
     return result;
   }
+
+  /*
+   * Given a fixed-length integer array arr, duplicate each occurrence of zero,
+   * shifting the remaining elements to the right.
+   * 
+   * NOTE: that elements beyond the length of the original array are not written.
+   * Do the above modifications to the input array in place and do not return
+   * anything.
+   */
+  public void duplicateZeros(int[] arr) {
+    int length = arr.length;
+    int[] temporaryArray = Arrays.copyOf(arr, length);
+    int temporaryArrayPointer = 0, arrayPointer = 0;
+
+    while (arrayPointer < length) {
+      arr[arrayPointer] = temporaryArray[temporaryArrayPointer];
+
+      if (temporaryArray[temporaryArrayPointer] == 0 && arrayPointer < length - 1) {
+        arr[++arrayPointer] = 0;
+      }
+
+      temporaryArrayPointer++;
+      arrayPointer++;
+    }
+  }
 }

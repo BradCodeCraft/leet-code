@@ -28,4 +28,19 @@ public class SolutionTest {
         new int[] { 4, 9, 9, 49, 121 },
         new Solution().sortedSquares(new int[] { -7, -3, 2, 3, 11 }));
   }
+
+  @Test
+  void testDuplicateZeros() {
+    int[] arrayOne = new int[] { 1, 0, 2, 3, 0, 4, 5, 0 };
+    new Solution().duplicateZeros(arrayOne);
+    assertArrayEquals(
+        new int[] { 1, 0, 0, 2, 3, 0, 0, 4 },
+        arrayOne);
+
+    int[] arrayTwo = new int[] { 0, 0, 0, 0, 0, 0, 0 };
+    new Solution().duplicateZeros(arrayTwo);
+    assertArrayEquals(
+        new int[] { 0, 0, 0, 0, 0, 0, 0 },
+        arrayTwo);
+  }
 }
