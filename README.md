@@ -1,3 +1,3 @@
 # LeetCode Problems
 
-Solved in Python
+Solved in Python and Java
