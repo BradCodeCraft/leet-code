@@ -1,6 +1,8 @@
 package dev.bradcodecraft.app;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Solution {
   /*
@@ -177,5 +179,27 @@ public class Solution {
     }
 
     return insertIndex;
+  }
+
+  /*
+   * Given an array arr of integers, check if there exist two indices i and j such
+   * that :
+   * 
+   * - i != j
+   * - 0 <= i, j < arr.length
+   * - arr[i] == 2 * arr[j]
+   */
+  public boolean checkIfExist(int[] arr) {
+    Map<Integer, Integer> seenMap = new HashMap<Integer, Integer>();
+
+    for (int i = 0; i < arr.length; i++) {
+      if ((seenMap.containsKey(arr[i] / 2) && arr[i] % 2 == 0) || seenMap.containsKey(arr[i] * 2)) {
+        return true;
+      }
+
+      seenMap.put(arr[i], i);
+    }
+
+    return false;
   }
 }
