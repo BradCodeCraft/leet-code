@@ -2,6 +2,8 @@ package dev.bradcodecraft.app;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -81,5 +83,11 @@ public class SolutionTest {
   void testRemoveDuplicates() {
     assertEquals(2, new Solution().removeDuplicates(new int[] { 1, 1, 2 }));
     assertEquals(5, new Solution().removeDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 }));
+  }
+
+  @Test
+  void testCheckIfExist() {
+    assertTrue(new Solution().checkIfExist(new int[] { 10, 2, 5, 3 }));
+    assertFalse(new Solution().checkIfExist(new int[] { 3, 1, 7, 11 }));
   }
 }
