@@ -76,4 +76,10 @@ public class SolutionTest {
     assertEquals(2, new Solution().removeElement(new int[] { 3, 2, 2, 3 }, 3));
     assertEquals(5, new Solution().removeElement(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2));
   }
+
+  @Test
+  void testRemoveDuplicates() {
+    assertEquals(2, new Solution().removeDuplicates(new int[] { 1, 1, 2 }));
+    assertEquals(5, new Solution().removeDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 }));
+  }
 }
