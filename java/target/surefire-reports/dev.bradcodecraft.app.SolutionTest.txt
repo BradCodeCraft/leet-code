@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: dev.bradcodecraft.app.SolutionTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s -- in dev.bradcodecraft.app.SolutionTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in dev.bradcodecraft.app.SolutionTest

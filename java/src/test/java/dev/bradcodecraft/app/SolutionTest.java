@@ -70,4 +70,10 @@ public class SolutionTest {
         new int[] { 1, 2 },
         arrayFour);
   }
+
+  @Test
+  void testRemoveElement() {
+    assertEquals(2, new Solution().removeElement(new int[] { 3, 2, 2, 3 }, 3));
+    assertEquals(5, new Solution().removeElement(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2));
+  }
 }
